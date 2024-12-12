@@ -2,6 +2,7 @@ import "./index.css";
 
 function Input(basement) {
   const {
+    className,
     type = "text",
     placeholder = "Enter any text",
     value,
@@ -11,7 +12,7 @@ function Input(basement) {
     danger = false,
   } = basement;
 
-  const classes = `my-input my-input--${type} my-input--${
+  const classes = `${className} my-input my-input--${type} my-input--${
     disabled ? "disabled" : "enabled"
   } my-input--${danger ? "danger" : "safe"}`;
 

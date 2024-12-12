@@ -1,14 +1,14 @@
 import "./index.css";
 import { useState } from "react";
 
-function Accordion({ title = "Bababoi", defaultOpen, children }) {
+function Accordion({ className, title = "Bababoi", defaultOpen, children }) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
 
-  const classes = `my-accordion my-accordion--${
+  const classes = `${className} my-accordion my-accordion--${
     defaultOpen ? "open" : "closed"
   }}`;
 

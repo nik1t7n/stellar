@@ -1,7 +1,7 @@
 import "./index.css";
 
-function Tooltip({ text = "Tooltip", position = "top", children }) {
-  const classes = `my-tooltip my-tooltip--${position}`;
+function Tooltip({className, text = "Tooltip", position = "top", children }) {
+  const classes = `${className} my-tooltip my-tooltip--${position}`;
 
   return (
     <div className={classes}>
